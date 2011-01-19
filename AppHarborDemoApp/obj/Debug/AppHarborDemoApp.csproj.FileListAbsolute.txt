@@ -1,0 +1,5 @@
+C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\bin\AppHarborDemoApp.dll
+C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\bin\AppHarborDemoApp.pdb
+C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\obj\Debug\AppHarborDemoApp.dll
+C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\obj\Debug\AppHarborDemoApp.pdb
