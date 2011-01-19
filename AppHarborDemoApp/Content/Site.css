@@ -66,3 +66,13 @@ textarea
 {
     display: none;
 }
+
+table td, th
+{
+    padding: 5px 7px 5px 5px;
+}
+
+table th
+{
+    font-weight: bold;
+}

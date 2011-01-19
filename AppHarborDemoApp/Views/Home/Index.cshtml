@@ -1,18 +1,53 @@
-﻿@{
-    ViewBag.Title = "Index";
+﻿@model IList<Comment>
+@{
+    ViewBag.Title = "Home";
 }
 
-@section head {
+<div style="padding: 15px">
 
-<script>
+    <h2>Say Hi</h2>
 
-    $(function () {
+    <br />
 
-        $('h1').fadeIn('slow');
-    });
+    <form action="/Home/Create" method="post">
+    
+        <span>Drop me a line below:</span><br />
+    
+        <textarea id="Data" name="Data" cols="40" rows="4"></textarea><br />
+    
+        <input type="submit" value="submit"  />
 
-</script>
+    </form>
 
+    <br />
+
+    @if (Model.Any())
+    {
+
+    <table>
+    <tr>
+        <th>
+            Data
+        </th>
+        <th>
+            Created On
+        </th>
+    </tr>
+
+@foreach (var c in Model)
+{
+    <tr>
+        <td>
+            @c.Data
+        </td>
+        <td>
+            @String.Format("{0:g}", c.CreatedOn)
+        </td>
+    </tr>
 }
 
-<h1 style="display: none; text-align: center; color: #cc0000">Hello from App Harbor running on ASP.NET MVC 3!  Coded by aj</h1>
+</table>
+        
+    }
+
+</div>

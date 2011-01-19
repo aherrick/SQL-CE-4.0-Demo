@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="AppHarbor">
+  <DataContextMoniker Name="/AppHarborDataContext" />
+  <nestedChildShapes>
+    <classShape Id="41b6613d-c1f5-4fb9-9a13-aa6f699105f5" absoluteBounds="4.75, 1.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/AppHarborDataContext/Comment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="51280591-babd-407f-9d38-8f4ba2d5e1aa" absoluteBounds="4.765, 2.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
