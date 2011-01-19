@@ -1,4 +1,4 @@
-﻿@model IList<Comment>
+﻿@model CommentsVM
 @{
     ViewBag.Title = "Home";
 }
@@ -9,19 +9,22 @@
 
     <br />
 
-    <form action="/Home/Create" method="post">
+  @using (Html.BeginForm("Create", "Home"))
+  {
+        @Html.ValidationSummary(true)
     
         <span>Drop me a line below:</span><br />
     
-        <textarea id="Data" name="Data" cols="40" rows="4"></textarea><br />
+        @Html.TextAreaFor(x => x.Comment.Data, 4, 40, null)
+        @Html.ValidationMessageFor(x => x.Comment.Data)
+        <br />
     
         <input type="submit" value="submit"  />
-
-    </form>
+  }
 
     <br />
 
-    @if (Model.Any())
+    @if (Model.Comments.Any())
     {
 
     <table>
@@ -34,7 +37,7 @@
         </th>
     </tr>
 
-@foreach (var c in Model)
+@foreach (var c in Model.Comments)
 {
     <tr>
         <td>

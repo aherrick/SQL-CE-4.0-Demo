@@ -10,7 +10,7 @@ namespace AppHarborDemoApp.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage="Come on this field is required!")]
         public string Data { get; set; }
 
         public DateTime CreatedOn { get; set; }

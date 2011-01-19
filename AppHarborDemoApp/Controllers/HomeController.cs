@@ -13,8 +13,9 @@ namespace AppHarborDemoApp.Controllers
 
         public ActionResult Index()
         {
-            var comments = _db.GetComments();
-            return View(comments);
+            var vm = new CommentsVM();
+            vm.Comments = _db.GetComments();
+            return View(vm);
         }
 
         [HttpPost]
@@ -22,9 +23,18 @@ namespace AppHarborDemoApp.Controllers
         {
             comment.CreatedOn = DateTime.Now;
 
-            _db.SaveComment(comment);
-
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _db.SaveComment(comment);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                var vm = new CommentsVM();
+                vm.Comment = comment;
+                vm.Comments = _db.GetComments();
+                return View("Index", vm);
+            }
         }
     }
 }
