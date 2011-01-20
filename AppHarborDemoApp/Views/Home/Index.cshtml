@@ -1,4 +1,5 @@
 ﻿@model CommentsVM
+           
 @{
     ViewBag.Title = "Home";
 }
@@ -9,8 +10,8 @@
 
     <br />
 
-  @using (Html.BeginForm("Create", "Home"))
-  {
+    @using (Html.BeginForm("Create", "Home"))
+    {
         @Html.ValidationSummary(true)
     
         <span>Drop me a line below:</span><br />
@@ -20,7 +21,7 @@
         <br />
     
         <input type="submit" value="submit"  />
-  }
+    }
 
     <br />
 

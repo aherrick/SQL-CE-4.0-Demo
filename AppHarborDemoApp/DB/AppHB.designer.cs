@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AppHarborDemoApp
+namespace AppHarborDemoApp.DB
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -22,8 +22,8 @@ namespace AppHarborDemoApp
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="db188")]
-	public partial class AppHarborDataContext : System.Data.Linq.DataContext
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="AJ")]
+	public partial class AppHBDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -35,31 +35,31 @@ namespace AppHarborDemoApp
     partial void DeleteComment(Comment instance);
     #endregion
 		
-		public AppHarborDataContext() : 
+		public AppHBDataContext() : 
 				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["db188ConnectionString"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public AppHarborDataContext(string connection) : 
+		public AppHBDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public AppHarborDataContext(System.Data.IDbConnection connection) : 
+		public AppHBDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public AppHarborDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public AppHBDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public AppHarborDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public AppHBDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();

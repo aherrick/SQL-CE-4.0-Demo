@@ -4,22 +4,39 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AppHarborDemoApp.Models;
+using AppHarborDemoApp.Repository;
 
 namespace AppHarborDemoApp.Controllers
 {
     public partial class HomeController : Controller
     {
-        private IAJRepository _db = new AJRepository();
+        private IAJRepository _db { get; set; }
+
+        #region Constructor
+
+        public HomeController()
+        {
+            _db = new AJRepository();
+        }
+
+        #endregion
+
+        #region Index
 
         public ActionResult Index()
         {
             var vm = new CommentsVM();
             vm.Comments = _db.GetComments();
+            vm.Comment = new Comment();
             return View(vm);
         }
 
+        #endregion
+
+        #region Create
+
         [HttpPost]
-        public ActionResult Create(AppHarborDemoApp.Models.Comment comment)
+        public ActionResult Create(Comment comment)
         {
             comment.CreatedOn = DateTime.Now;
 
@@ -36,5 +53,7 @@ namespace AppHarborDemoApp.Controllers
                 return View("Index", vm);
             }
         }
+
+        #endregion
     }
 }

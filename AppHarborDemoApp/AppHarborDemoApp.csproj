@@ -58,19 +58,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppHarbor.designer.cs">
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DB\AppHB.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AppHarbor.dbml</DependentUpon>
+      <DependentUpon>AppHB.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AJRepository.cs" />
+    <Compile Include="Repository\AJRepository.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\CommentsVM.cs" />
-    <Compile Include="Models\IAJRepository.cs" />
+    <Compile Include="Repository\IAJRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -89,24 +89,23 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="AppHarbor.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>AppHarbor.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AppHarbor.dbml.layout">
-      <DependentUpon>AppHarbor.dbml</DependentUpon>
+    <None Include="DB\AppHB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AppHB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DB\AppHB.dbml.layout">
+      <DependentUpon>AppHB.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
