@@ -38,10 +38,9 @@ namespace AppHarborDemoApp.Controllers
         [HttpPost]
         public ActionResult Create(Comment comment)
         {
-            comment.CreatedOn = DateTime.Now;
-
             if (ModelState.IsValid)
             {
+                comment.CreatedOn = DateTime.Now;
                 _db.SaveComment(comment);
                 return RedirectToAction("Index");
             }
