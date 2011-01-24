@@ -8,4 +8,3 @@ C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\bin\System.Data.SqlServer
 C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\bin\System.Data.SqlServerCe.Entity.dll
 C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\bin\WebActivator.dll
 C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\bin\WebActivator.pdb
-C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\bin\App_Data\AppHarborDemoApp.DB.AJDataContext.sdf
