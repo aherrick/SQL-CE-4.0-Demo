@@ -10,14 +10,11 @@ namespace AppHarborDemoApp.Controllers
 {
     public partial class HomeController : Controller
     {
-        private IAJRepository _db { get; set; }
+        private IAJRepository _db = new AJRepository();
 
         #region Constructor
 
-        public HomeController()
-        {
-            _db = new AJRepository();
-        }
+        public HomeController() { }
 
         #endregion
 
@@ -33,24 +30,36 @@ namespace AppHarborDemoApp.Controllers
 
         #endregion
 
-        #region Create
+        #region Index Post 
 
         [HttpPost]
-        public ActionResult Create(Comment comment)
+        public ActionResult Index(Comment comment)
         {
             if (ModelState.IsValid)
             {
                 comment.CreatedOn = DateTime.Now;
-                _db.SaveComment(comment);
+                _db.AddComment(comment);
+                _db.Save();
                 return RedirectToAction("Index");
             }
-            else
-            {
-                var vm = new CommentsVM();
-                vm.Comment = comment;
-                vm.Comments = _db.GetComments();
-                return View("Index", vm);
-            }
+
+            // error return view
+            var vm = new CommentsVM();
+            vm.Comment = comment;
+            vm.Comments = _db.GetComments();
+            return View("Index", vm);
+        }
+
+        #endregion
+
+        #region JSON Delete Comment
+
+        [HttpPost]
+        public JsonResult JSONDeleteComment(int id)
+        {
+            _db.DeleteComment(id);
+            _db.Save();
+            return Json(null);
         }
 
         #endregion

@@ -3,3 +3,9 @@ C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\bin\AppHarborDemoApp.pdb
 C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\obj\Debug\ResolveAssemblyReference.cache
 C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\obj\Debug\AppHarborDemoApp.dll
 C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\obj\Debug\AppHarborDemoApp.pdb
+C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\bin\EntityFramework.dll
+C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\bin\System.Data.SqlServerCe.dll
+C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\bin\System.Data.SqlServerCe.Entity.dll
+C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\bin\WebActivator.dll
+C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\bin\WebActivator.pdb
+C:\Projects\AJH Data\AppHarborDemoApp\AppHarborDemoApp\bin\App_Data\AppHarborDemoApp.DB.AJDataContext.sdf

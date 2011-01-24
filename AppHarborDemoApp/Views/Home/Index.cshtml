@@ -4,23 +4,43 @@
     ViewBag.Title = "Home";
 }
 
+@section head {
+
+<script src="/Content/js/HomeIndex.js" type="text/javascript"></script>
+
+}
+
 <div style="padding: 15px">
 
-    <h2>Say Hi!</h2>
-
-    <br />
-
-    @using (Html.BeginForm("Create", "Home"))
+    @using (Html.BeginForm("Index", "Home"))
     {
-        @Html.ValidationSummary(true)
-    
-        <span>Drop me a line below:</span><br />
-    
-        @Html.TextAreaFor(x => x.Comment.Data, 4, 40, null)
-        @Html.ValidationMessageFor(x => x.Comment.Data)
-        <br />
-    
-        <input type="submit" value="submit"  />
+        <table>
+            <tr>
+                <td>
+                      @Html.LabelFor(x => x.Comment.Message, "Drop me a line below:") <br />
+                      @Html.TextAreaFor(x => x.Comment.Message, 4, 40, null)
+                      @Html.ValidationMessageFor(x => x.Comment.Message)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                      @Html.LabelFor(x => x.Comment.Age, "Age:") <br />
+                      @Html.TextBoxFor(x => x.Comment.Age)
+                      @Html.ValidationMessageFor(x => x.Comment.Age)
+                </td>
+            </tr>        
+            <tr>
+                <td>
+                      @Html.LabelFor(x => x.Comment.Cool, "Are you cool?") <br />
+                      @Html.CheckBoxFor(x => x.Comment.Cool)
+                </td>
+            </tr>    
+            <tr>
+                <td>
+                      <input type="submit" value="submit" />
+                </td>
+            </tr>   
+        </table>
     }
 
     <br />
@@ -31,10 +51,18 @@
     <table>
     <tr>
         <th>
-            Data
+            Message
+        </th>
+        <th>
+            Age
+        </th>
+        <th>
+            Cool?
         </th>
         <th>
             Created On
+        </th>
+        <th>
         </th>
     </tr>
 
@@ -42,10 +70,20 @@
 {
     <tr>
         <td>
-            @c.Data
+            @c.Message
         </td>
         <td>
-            @String.Format("{0:g}", c.CreatedOn)
+            @c.Age
+        </td>
+        <td>
+            @c.Cool
+        </td>
+        <td>
+            @c.CreatedOn.ToString("g")
+        </td>
+        <td>
+            <a href="#" onclick="return deleteComment(@c.Id);">
+                <img src="/Content/img/remove16.png" alt="Delete Comment" /></a>
         </td>
     </tr>
 }

@@ -9,6 +9,10 @@ namespace AppHarborDemoApp.Repository
     public interface IAJRepository
     {
         IList<AppHarborDemoApp.Models.Comment> GetComments();
-        int SaveComment(AppHarborDemoApp.Models.Comment comment);
+        void AddComment(Comment comment);
+        void DeleteComment(int id);
+
+        // save
+        void Save();
     }
 }

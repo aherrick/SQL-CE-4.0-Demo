@@ -3,40 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using AppHarborDemoApp.Models;
+using AppHarborDemoApp.DB;
 
 namespace AppHarborDemoApp.Repository
 {
     public class AJRepository : IAJRepository
     {
+        private AJDataContext _ctx = new AJDataContext();
 
-        private AppHarborDemoApp.DB.AppHBDataContext _db;
-
-        public AJRepository()
-        {
-            _db = new AppHarborDemoApp.DB.AppHBDataContext();
-        }
+        public AJRepository() {  }
 
         #region IAJRepository Members
 
         public IList<Comment> GetComments()
         {
-            return (from m in _db.Comments
-                    select new Comment
-                   {
-                       Data = m.Data,
-                       CreatedOn = m.CreatedOn
-                   }).ToList();
+            return _ctx.Comments.ToList();
         }
 
-        public int SaveComment(Comment comment)
+        public void AddComment(Comment comment)
         {
-            var c = new AppHarborDemoApp.DB.Comment();
-            c.Data = comment.Data;
-            c.CreatedOn = comment.CreatedOn;
-            _db.Comments.InsertOnSubmit(c);
-            _db.SubmitChanges();
+            _ctx.Comments.Add(comment);
+        }
 
-            return c.Id;
+        public void DeleteComment(int id)
+        {
+            var c = _ctx.Comments.Find(id);
+            _ctx.Comments.Remove(c);
+        }
+
+        public void Save()
+        {
+            _ctx.SaveChanges();
         }
 
         #endregion
