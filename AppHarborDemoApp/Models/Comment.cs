@@ -20,6 +20,7 @@ namespace AppHarborDemoApp.Models
 
         public bool Cool { get; set; }
 
+
         public DateTime CreatedOn { get; set; }
     }
 }
