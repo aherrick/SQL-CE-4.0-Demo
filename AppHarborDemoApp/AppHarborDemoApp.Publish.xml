@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="C:\Users\aherrick\Desktop\testsite" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="01/25/2011 07:15:41" />
+    <file relUrl="bin/EntityFramework.dll" publishTime="01/24/2011 15:52:56" />
+    <file relUrl="Views/Shared/_Layout.cshtml" publishTime="01/20/2011 14:42:50" />
+    <file relUrl="Views/_ViewStart.cshtml" publishTime="01/18/2011 21:43:47" />
+    <file relUrl="packages.config" publishTime="01/24/2011 15:52:58" />
+    <file relUrl="Content/js/HomeIndex.js" publishTime="01/24/2011 15:28:57" />
+    <file relUrl="bin/WebActivator.dll" publishTime="01/24/2011 15:52:56" />
+    <file relUrl="Views/Home/Index.cshtml" publishTime="01/24/2011 15:47:27" />
+    <file relUrl="bin/System.Data.SqlServerCe.Entity.dll" publishTime="01/24/2011 15:52:56" />
+    <file relUrl="bin/AppHarborDemoApp.dll" publishTime="01/25/2011 07:14:57" />
+    <file relUrl="bin/System.Data.SqlServerCe.dll" publishTime="01/24/2011 15:52:56" />
+    <file relUrl="Views/Web.config" publishTime="01/19/2011 15:32:00" />
+    <file relUrl="Views/Shared/Error.cshtml" publishTime="01/18/2011 21:43:47" />
+    <file relUrl="Content/Site.css" publishTime="01/19/2011 16:26:19" />
+    <file relUrl="Global.asax" publishTime="01/18/2011 21:43:47" />
+    <file relUrl="bin/AppHarborDemoApp.pdb" publishTime="01/25/2011 07:14:57" />
+    <file relUrl="bin/WebActivator.pdb" publishTime="01/24/2011 15:52:56" />
+    <file relUrl="Scripts/jquery.validate.unobtrusive.min.js" publishTime="01/19/2011 17:15:27" />
+    <file relUrl="Content/img/remove16.png" publishTime="01/24/2011 15:20:50" />
+  </publishProfile>
+</publishData>
